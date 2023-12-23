@@ -7,7 +7,7 @@ import com.portal.employee.Documents.Employee;
 
 @Repository
 public interface EmployeeRepo extends MongoRepository<Employee, String> {
-
+    
 }
     
 

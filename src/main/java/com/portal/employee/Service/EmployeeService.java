@@ -23,4 +23,8 @@ public class EmployeeService {
         return employee.orElse(null);
     }
 
+    public Employee addEmployee(Employee employee){
+        return employeeRepo.save(employee);
+    }
+
 }
