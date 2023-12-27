@@ -1,14 +1,10 @@
 package com.portal.employee.repository;
 
+import com.portal.employee.document.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.portal.employee.document.Employee;
-
-import java.util.Optional;
-
 @Repository
-public interface EmployeeRepo extends MongoRepository<Employee, String> {
+public interface UserRepo extends MongoRepository<User, String> {
+    User findByUsername(String username);
 }
-    
-

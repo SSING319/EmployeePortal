@@ -1,4 +1,4 @@
-package com.portal.employee.Documents;
+package com.portal.employee.document;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
