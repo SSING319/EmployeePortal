@@ -29,7 +29,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((auth) -> auth
-                        .requestMatchers("/v1/portal/signup").permitAll()
+                        .requestMatchers("/v1/portal/signup", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 )
                 .authorizeHttpRequests((auth) -> auth
                         .requestMatchers("/v1/portal/**").authenticated()
